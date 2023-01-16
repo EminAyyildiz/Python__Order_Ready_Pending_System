@@ -1,3 +1,6 @@
+# Written by Emin Ayyıldız
+print("Written by Emin Ayyıldız")
+
 import time
 
 orders = []
@@ -21,7 +24,6 @@ def check_admin_credentials(username, password):
     else:
         print("Wrong username or password...")
         return False
-
 
 while True:
     print("Welcome to restaurant system. We wish you a nice day..")

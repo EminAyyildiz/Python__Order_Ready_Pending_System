@@ -40,6 +40,9 @@ while True:
             elif any(item["table_number"] == table_number and item["status"] == "ready" for item in ready_orders):
                 ready_orders = [order for order in ready_orders if order["table_number"] != table_number]
             if table_number == "q" or table_number == "Q":
+                print("Exiting...")
+                time.sleep(1.5)
+                print("BYE BYE :)) ")
                 break
             if len(table_number) < 1:
                 pass
@@ -66,8 +69,7 @@ while True:
                             print("Payment is progress, please wait...")
                             time.sleep(1.5)
                             print("Paypal payment processed.")
-                            orders.append(
-                                {"table_number": table_number, "order_details": order_details, "status": "pending"})
+                            orders.append({"table_number": table_number, "order_details": order_details, "status": "pending"})
                             print("The order has been confirmed.")
                         else:
                             print("Invalid card number...")
@@ -80,6 +82,9 @@ while True:
 
             update_order = input("Enter the ready order number : ")
             if update_order == "q" or update_order == "Q":
+                print("Exiting...")
+                time.sleep(1.5)
+                print("BYE BYE :)) ")
                 break
             if update_order:
                 if update_order in [order["table_number"] for order in orders]:
